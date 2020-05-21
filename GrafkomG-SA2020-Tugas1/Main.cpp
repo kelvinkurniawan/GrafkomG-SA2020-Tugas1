@@ -3,7 +3,7 @@
 #include <GL/freeglut.h>
 
 void createHouse() {
-
+	// Wall on top
 	glBegin(GL_POLYGON);
 	glColor4ub(43, 43, 43, 1);
 	glVertex2f(10, 500);
@@ -11,6 +11,7 @@ void createHouse() {
 	glVertex2f(200, 630);
 	glVertex2f(10, 630);
 	glEnd();
+	// End
 
 	// Start the roof
 	glBegin(GL_POLYGON);
@@ -73,21 +74,34 @@ void createHouse() {
 	// End
 }
 
+void createLand() {
+	// Main wall
+	glBegin(GL_POLYGON);
+	glColor4ub(90, 83, 83, 1);
+	glVertex2f(0, 700);
+	glVertex2f(0, 800);
+	glColor4ub(42, 35, 35, 1);
+	glVertex2f(1024, 800);
+	glVertex2f(1024, 700);
+	glEnd();
+	// End of wall
+}
+
 void createSunlight() {
 	glBegin(GL_POLYGON);
 	glColor4ub(255, 254, 214, 1);
 	glVertex2f(0, 0);
 	glVertex2f(0, 1024);
-	glVertex2f(800, 1024);
-	glVertex2f(800, 0);
+	glVertex2f(1024, 1024);
+	glVertex2f(1024, 0);
 	glEnd();
 }
 
 void renderObject() {
 	glClearColor(0, 0, 0, 1);
 	glClear(GL_COLOR_BUFFER_BIT);
-
 	createSunlight();
+	createLand();
 	createHouse();
 
 	glFlush();
@@ -97,10 +111,10 @@ void renderObject() {
 int main(int argc, char** argv) {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA);
-	glutInitWindowSize(800, 600);
+	glutInitWindowSize(1024, 800);
 	glutCreateWindow("Pertemuan Pertama ~ Main");
 	glutDisplayFunc(renderObject);
-	gluOrtho2D(0, 800, 1024, 0);
+	gluOrtho2D(0, 1024, 800, 0);
 
 	glutMainLoop();
 
