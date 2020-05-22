@@ -135,7 +135,7 @@ int main(int argc, char** argv) {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA);
 	glutInitWindowSize(1024, 800);
-	glutCreateWindow("Pertemuan Pertama ~ Main");
+	glutCreateWindow("Tugas Pertama ~ Kelvin Kurniawan");
 	glutDisplayFunc(renderObject);
 	gluOrtho2D(0, 1024, 800, 0);
 
