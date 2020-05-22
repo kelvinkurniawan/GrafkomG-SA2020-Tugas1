@@ -87,6 +87,26 @@ void createLand() {
 	// End of wall
 }
 
+void createSun() {
+	// Main wall
+	glBegin(GL_POLYGON);
+	glColor4ub(242, 206, 63, 1);
+	glVertex2f(900, 30);
+	glVertex2f(980, 30);
+	glVertex2f(980, 120);
+	glVertex2f(900, 120);
+	glEnd();
+	glBegin(GL_POLYGON);
+	glColor4ub(247, 217, 99, 1);
+	glVertex2f(940, 10);
+	glVertex2f(1000, 75);
+	glColor4ub(255, 233, 145, 1);
+	glVertex2f(940, 140);
+	glVertex2f(880, 75);
+	glEnd();
+	// End of wall
+}
+
 void createSunlight() {
 	glBegin(GL_POLYGON);
 	glColor4ub(255, 254, 214, 1);
@@ -101,6 +121,9 @@ void renderObject() {
 	glClearColor(0, 0, 0, 1);
 	glClear(GL_COLOR_BUFFER_BIT);
 	createSunlight();
+
+	createSun();
+
 	createLand();
 	createHouse();
 
