@@ -107,6 +107,42 @@ void createSun() {
 	// End of wall
 }
 
+void createBigTree() {
+	// Main wall
+	glBegin(GL_POLYGON);
+	glColor4ub(36, 20, 20, 1);
+	glVertex2f(900, 600);
+	glVertex2f(940, 600);
+	glVertex2f(940, 700);
+	glVertex2f(900, 700);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor4ub(30, 156, 53, 1);
+	glVertex2f(920, 500);
+	glColor4ub(35, 120, 50, 1);
+	glVertex2f(980, 600);
+	glVertex2f(860, 600);
+	glEnd();	
+	
+	glBegin(GL_POLYGON);
+	glColor4ub(30, 156, 53, 1);
+	glVertex2f(920, 440);
+	glColor4ub(35, 120, 50, 1);
+	glVertex2f(980, 540);
+	glVertex2f(860, 540);
+	glEnd();	
+	
+	glBegin(GL_POLYGON);
+	glColor4ub(30, 156, 53, 1);
+	glVertex2f(920, 380);
+	glColor4ub(35, 120, 50, 1);
+	glVertex2f(980, 480);
+	glVertex2f(860, 480);
+	glEnd();
+	// End of wall
+}
+
 void createSunlight() {
 	glBegin(GL_POLYGON);
 	glColor4ub(255, 254, 214, 1);
@@ -125,6 +161,8 @@ void renderObject() {
 	createSun();
 
 	createLand();
+
+	createBigTree();
 	createHouse();
 
 	glFlush();
