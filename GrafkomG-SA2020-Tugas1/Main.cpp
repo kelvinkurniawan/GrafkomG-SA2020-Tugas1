@@ -87,6 +87,26 @@ void createLand() {
 	// End of wall
 }
 
+void createMountain() {
+	glBegin(GL_POLYGON);
+	glColor4ub(38, 130, 54, 1);
+	glVertex2f(400, 800);
+	glVertex2f(800, 520);
+	glColor4ub(114, 176, 125, 1);
+	glVertex2f(1280, 800);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor4ub(38, 130, 54, 1);
+	glVertex2f(0, 600);
+	glVertex2f(400, 420);
+	glColor4ub(114, 176, 125, 1);
+	glVertex2f(1000, 800);
+	glVertex2f(0, 800);
+	glEnd();
+
+}
+
 void createSun() {
 	// Main wall
 	glBegin(GL_POLYGON);
@@ -157,9 +177,8 @@ void renderObject() {
 	glClearColor(0, 0, 0, 1);
 	glClear(GL_COLOR_BUFFER_BIT);
 	createSunlight();
-
+	createMountain();
 	createSun();
-
 	createLand();
 
 	createBigTree();
