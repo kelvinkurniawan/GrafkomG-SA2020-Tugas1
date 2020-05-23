@@ -74,6 +74,25 @@ void createHouse() {
 	// End
 }
 
+void createMailbox() {
+	glBegin(GL_POLYGON);
+	glColor4ub(36, 36, 36, 1);
+	glVertex2f(250, 690);
+	glVertex2f(255, 690);
+	glVertex2f(255, 720);
+	glVertex2f(250, 720);
+	glEnd();
+
+
+	glBegin(GL_POLYGON);
+	glColor4ub(173, 50, 50, 1);
+	glVertex2f(230, 670);
+	glVertex2f(230, 690);
+	glVertex2f(270, 690);
+	glVertex2f(270, 670);
+	glEnd();
+}
+
 void createLand() {
 	// Main wall
 	glBegin(GL_POLYGON);
@@ -219,7 +238,8 @@ void renderObject() {
 	createBird();
 	createAnotherBird();
 	createLand();
-
+	
+	createMailbox();
 	createBigTree();
 	createHouse();
 
