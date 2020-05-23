@@ -87,6 +87,44 @@ void createLand() {
 	// End of wall
 }
 
+void createBird() {
+	// Main wall
+	glBegin(GL_LINE_LOOP);
+	glColor4ub(74, 74, 74, 1);
+	glVertex2f(200, 260);
+	glVertex2f(220, 250);
+	glVertex2f(240, 260);
+	glVertex2f(260, 250);
+	glVertex2f(280, 260);
+	glVertex2f(280, 261);
+	glVertex2f(260, 251);
+	glVertex2f(240, 261);
+	glVertex2f(220, 251);
+	glVertex2f(200, 261);
+	glVertex2f(200, 260);
+	glEnd();
+	// End of wall
+}
+
+void createAnotherBird() {
+	// Main wall
+	glBegin(GL_LINE_LOOP);
+	glColor4ub(74, 74, 74, 1);
+	glVertex2f(700, 460);
+	glVertex2f(720, 450);
+	glVertex2f(740, 460);
+	glVertex2f(760, 450);
+	glVertex2f(780, 460);
+	glVertex2f(780, 461);
+	glVertex2f(760, 451);
+	glVertex2f(740, 461);
+	glVertex2f(720, 451);
+	glVertex2f(700, 461);
+	glVertex2f(700, 460);
+	glEnd();
+	// End of wall
+}
+
 void createMountain() {
 	glBegin(GL_POLYGON);
 	glColor4ub(38, 130, 54, 1);
@@ -104,7 +142,6 @@ void createMountain() {
 	glVertex2f(1000, 800);
 	glVertex2f(0, 800);
 	glEnd();
-
 }
 
 void createSun() {
@@ -179,6 +216,8 @@ void renderObject() {
 	createSunlight();
 	createMountain();
 	createSun();
+	createBird();
+	createAnotherBird();
 	createLand();
 
 	createBigTree();
